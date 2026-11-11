@@ -126,9 +126,6 @@ print("=" * 20)
 
 data = response.json()
 
-print(data)
-
-
 results = data["results"]
 
 score = 0
@@ -195,10 +192,9 @@ for index, result in enumerate(results, start=1):
   else:
     print("You failed it!!!")
 
-  print(f"Correct Answer: {letters[correct_index]}\\n-- {correct_answer}")
+  print(f"Correct Answer: {letters[correct_index]}\n-- {correct_answer}")
   print("=" * 20)
   print(f"Total Score: {score}/{index}")
 
 
 ##### BY ANJI BOB-MANUEL #####################################
-
