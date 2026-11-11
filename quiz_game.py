@@ -175,35 +175,7 @@ for index, result in enumerate(results, start=1):
       letter_choice = input("Input your answer (A-D): ").upper()
       print("=" * 30)
 
-
-    #####################################
-    ## correct logic for multiples
-
-    correct_index = answers.index(correct_answer)
-
-    ## now we have index of correct answer
-
-    letter_index = letters.index(letter_choice)
-
-    if letter_index == correct_index:
-      print("You got it!!!")
-      print("="*20)
-
-    else:
-      print("You failed it!!!")
-      print("="*20)
-
-    print(f"Correct Answer: {letters[correct_index]}\n-- {answers[correct_index]}")
-    print("="*20)
-    score = score+1
-    print(score)
-    print("="*20)
-
-    print(f"Total Score: {score}/{amount}")
-
-  
-
-  else: 
+  else:
     letter_choice = input("Input your answer (1-2): ")
     print("=" * 30)
 
@@ -213,34 +185,19 @@ for index, result in enumerate(results, start=1):
       letter_choice = input("Input your answer (1-2): ")
       print("=" * 30)
 
+  # Shared answer-checking and scoring logic
+  selected_answer = answers[letters.index(letter_choice)]
+  correct_index = answers.index(correct_answer)
 
-    #####################################
-    ## correct logic for multiples
+  if selected_answer == correct_answer:
+    print("You got it!!!")
+    score += 1
+  else:
+    print("You failed it!!!")
 
-    correct_index = answers.index(correct_answer)
-
-    ## now we have index of correct answer
-
-    letter_index = letters.index(letter_choice)
-
-    if letter_index == correct_index:
-      print("You got it!!!")
-      print("="*20)
-      
-
-    else:
-      print("You failed it!!!")
-      print("="*20)
-
-    print(f"Correct Answer: {letters[correct_index]}\n-- {answers[correct_index]}")
-    print("="*20)
-    score = score+1
-    print(score)
-    print("="*20)
-
-    print(f"Total Score: {score}/{amount}")
-
-
+  print(f"Correct Answer: {letters[correct_index]}\\n-- {correct_answer}")
+  print("=" * 20)
+  print(f"Total Score: {score}/{index}")
 
 
 ##### BY ANJI BOB-MANUEL #####################################
